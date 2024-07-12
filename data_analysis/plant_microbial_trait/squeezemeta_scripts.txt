@@ -1,0 +1,10 @@
+## SqueezeMeta
+conda activate SqueezeMeta
+
+
+# configuring the databases
+perl ~/SqueezeMeta/utils/install_utils/configure_nodb.pl ~ /SqMetaDB
+
+
+# Execution and running scripts
+nohup ~/miniconda3/envs/SqueezeMeta/scripts/SqueezeMeta.pl -m coassembly -a megahit -c 500 -p rhizo -s /data/ssCheng/samples -f /data/ssCheng/20200414/rawseq -map bwa --nopfam --nobins -b 15 -t 60
