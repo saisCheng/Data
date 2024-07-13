@@ -1,7 +1,5 @@
+library(FactoMineR)
 library(PCAtest)
-library(doBy)
-library(ggplot2)
-library(ggrepel)
 
 data <- read_excel("plant_traits.xlsx")
 
@@ -24,6 +22,10 @@ pc2 <- merged_data[, 2]
 group <- data$group
 
 # Prepare data for plotting
+library(doBy)
+library(ggplot2)
+library(ggrepel)
+
 plotdata <- data.frame(pc1=pc1, pc2=pc2, group=group)
 
 se <- function(x) sd(x) / sqrt(length(x))
